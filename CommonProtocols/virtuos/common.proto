@@ -1,0 +1,20 @@
+package virtuos;
+
+import "google/protobuf/csharp_options.proto";
+
+option (google.protobuf.csharp_file_options).namespace = "com.virtuos.rocket.common";
+option (google.protobuf.csharp_file_options).umbrella_classname = "CommonProtos";
+
+option optimize_for = SPEED;
+
+message Message 
+{
+    optional int32 request_number = 1;
+    optional int32 id = 2;
+    extensions 100 to max;
+}
+
+message Packet {
+    optional int64 id = 1;
+    optional Message payload = 2;
+}

@@ -1,0 +1,20 @@
+package virtuos;
+
+import "google/protobuf/csharp_options.proto";
+import "virtuos/common.proto";
+
+option (google.protobuf.csharp_file_options).namespace = "Com.Virtuos.Rocket.NetworkMessage";
+option (google.protobuf.csharp_file_options).umbrella_classname = "GameProtos";
+
+option optimize_for = SPEED;
+
+message ActionCommitedRequest 
+{
+	extend Message
+	{
+        optional ActionCommitedRequest request_number = 523;
+    }
+
+	optional int64 game_id= 2;
+	optional int32 turn_index = 3;
+}

@@ -1,0 +1,16 @@
+package virtuos;
+
+import "google/protobuf/csharp_options.proto";
+import "virtuos/common.proto";
+
+option (google.protobuf.csharp_file_options).namespace = "Com.Virtuos.Rocket.NetworkMessage";
+option (google.protobuf.csharp_file_options).umbrella_classname = "RequestProtos";
+
+message PingRequest 
+{
+    extend Message
+	{
+        optional PingRequest request_number = 777;
+    }
+    optional int64 timestamp = 2;
+}

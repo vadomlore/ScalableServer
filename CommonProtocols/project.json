@@ -1,0 +1,24 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": { 
+    "DotNetty.Common": {
+      "target": "project"
+    },
+    "Google.ProtocolBuffers": "2.4.1.555"
+  },
+  "frameworks": {
+    "netstandard1.3": {
+      "dependencies": {
+        "NETStandard.Library": "1.6.0",
+        "Microsoft.NETCore.Portable.Compatibility": "1.0.1",
+        "System.Diagnostics.Contracts": "4.0.1"
+      },
+      "imports": [
+        "portable-net45+win8"
+      ]
+    },
+    "net451": {
+    } 
+  }
+}
