@@ -45,13 +45,13 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
         pb::ExtensionRegistry registry = pb::ExtensionRegistry.CreateInstance();
         RegisterAllExtensions(registry);
         global::Google.ProtocolBuffers.DescriptorProtos.CSharpOptions.RegisterAllExtensions(registry);
-        global::Com.Virtuos.Rocket.NetworkMessage.BaseProtos.RegisterAllExtensions(registry);
+        global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.RegisterAllExtensions(registry);
         return registry;
       };
       pbd::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
           new pbd::FileDescriptor[] {
           global::Google.ProtocolBuffers.DescriptorProtos.CSharpOptions.Descriptor, 
-          global::Com.Virtuos.Rocket.NetworkMessage.BaseProtos.Descriptor, 
+          global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.Descriptor, 
           }, assigner);
     }
     #endregion

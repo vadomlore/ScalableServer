@@ -13,12 +13,17 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
   
     #region Extension registration
     public static void RegisterAllExtensions(pb::ExtensionRegistry registry) {
-      registry.Add(global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest.RequestNumber);
     }
     #endregion
     #region Static variables
-    internal static pbd::MessageDescriptor internal__static_virtuos_ActionCommitedRequest__Descriptor;
-    internal static pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest, global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest.Builder> internal__static_virtuos_ActionCommitedRequest__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_virtuos_Player__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.Player, global::Com.Virtuos.Rocket.NetworkMessage.Player.Builder> internal__static_virtuos_Player__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_virtuos_Avator__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.Avator, global::Com.Virtuos.Rocket.NetworkMessage.Avator.Builder> internal__static_virtuos_Avator__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_virtuos_Rank__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.Rank, global::Com.Virtuos.Rocket.NetworkMessage.Rank.Builder> internal__static_virtuos_Rank__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_virtuos_AccessRights__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.AccessRights, global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.Builder> internal__static_virtuos_AccessRights__FieldAccessorTable;
     #endregion
     #region Descriptor
     public static pbd::FileDescriptor Descriptor {
@@ -31,28 +36,46 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
           string.Concat(
             "ChJ2aXJ0dW9zL2dhbWUucHJvdG8SB3ZpcnR1b3MaJGdvb2dsZS9wcm90b2J1", 
             "Zi9jc2hhcnBfb3B0aW9ucy5wcm90bxoUdmlydHVvcy9jb21tb24ucHJvdG8i", 
-            "hwEKFUFjdGlvbkNvbW1pdGVkUmVxdWVzdBIPCgdnYW1lX2lkGAIgASgDEhIK", 
-            "CnR1cm5faW5kZXgYAyABKAUySQoOcmVxdWVzdF9udW1iZXISEC52aXJ0dW9z", 
-            "Lk1lc3NhZ2UYiwQgASgLMh4udmlydHVvcy5BY3Rpb25Db21taXRlZFJlcXVl", 
-            "c3RCNEgBwj4vCiFDb20uVmlydHVvcy5Sb2NrZXQuTmV0d29ya01lc3NhZ2US", 
-          "CkdhbWVQcm90b3M="));
+            "nAIKBlBsYXllchIMCgRuYW1lGAEgAigJEgoKAmlkGAIgAigFEg0KBWthcm1h", 
+            "GAMgASgFEhIKCnJhbmtfc2NvcmUYBCABKAUSEAoId193X3dfaWQYBSACKAUS", 
+            "DAoEcmFuaxgGIAEoBRIQCghuYl9nYW1lcxgHIAEoBRIOCgZiYW5uZWQYCCAB", 
+            "KAgSDwoHYmxvY2tlZBgJIAEoCBIfCgZhdmF0b3IYCiABKAsyDy52aXJ0dW9z", 
+            "LkF2YXRvchIQCghsYW5ndWFnZRgLIAEoBRIKCgJ0ehgMIAEoCRIcCgVyYW5r", 
+            "cxgNIAMoCzINLnZpcnR1b3MuUmFuaxIlCgZyaWdodHMYDiABKAsyFS52aXJ0", 
+            "dW9zLkFjY2Vzc1JpZ2h0cyI1CgZBdmF0b3ISCgoCaWQYASABKAUSEAoIbG9j", 
+            "YXRpb24YAiABKAkSDQoFaW1hZ2UYAyABKAkiSAoEUmFuaxIMCgRyYW5rGAEg", 
+            "ASgFEhIKCnJhbmtfc2NvcmUYAiABKAISDAoEbmFtZRgDIAEoCRIQCghuYl9n", 
+            "YW1lcxgEIAEoBSItCgxBY2Nlc3NSaWdodHMSDAoEbmFtZRgBIAEoCRIPCgdm", 
+            "ZWF0dXJlGAIgASgJQjRIAcI+LwohQ29tLlZpcnR1b3MuUm9ja2V0Lk5ldHdv", 
+          "cmtNZXNzYWdlEgpHYW1lUHJvdG9z"));
       pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
         descriptor = root;
-        internal__static_virtuos_ActionCommitedRequest__Descriptor = Descriptor.MessageTypes[0];
-        internal__static_virtuos_ActionCommitedRequest__FieldAccessorTable = 
-            new pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest, global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest.Builder>(internal__static_virtuos_ActionCommitedRequest__Descriptor,
-                new string[] { "GameId", "TurnIndex", });
-        global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest.RequestNumber = pb::GeneratedSingleExtension<global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest>.CreateInstance(global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest.Descriptor.Extensions[0]);
+        internal__static_virtuos_Player__Descriptor = Descriptor.MessageTypes[0];
+        internal__static_virtuos_Player__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.Player, global::Com.Virtuos.Rocket.NetworkMessage.Player.Builder>(internal__static_virtuos_Player__Descriptor,
+                new string[] { "Name", "Id", "Karma", "RankScore", "WWWId", "Rank", "NbGames", "Banned", "Blocked", "Avator", "Language", "Tz", "Ranks", "Rights", });
+        internal__static_virtuos_Avator__Descriptor = Descriptor.MessageTypes[1];
+        internal__static_virtuos_Avator__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.Avator, global::Com.Virtuos.Rocket.NetworkMessage.Avator.Builder>(internal__static_virtuos_Avator__Descriptor,
+                new string[] { "Id", "Location", "Image", });
+        internal__static_virtuos_Rank__Descriptor = Descriptor.MessageTypes[2];
+        internal__static_virtuos_Rank__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.Rank, global::Com.Virtuos.Rocket.NetworkMessage.Rank.Builder>(internal__static_virtuos_Rank__Descriptor,
+                new string[] { "Rank_", "RankScore", "Name", "NbGames", });
+        internal__static_virtuos_AccessRights__Descriptor = Descriptor.MessageTypes[3];
+        internal__static_virtuos_AccessRights__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.AccessRights, global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.Builder>(internal__static_virtuos_AccessRights__Descriptor,
+                new string[] { "Name", "Feature", });
         pb::ExtensionRegistry registry = pb::ExtensionRegistry.CreateInstance();
         RegisterAllExtensions(registry);
         global::Google.ProtocolBuffers.DescriptorProtos.CSharpOptions.RegisterAllExtensions(registry);
-        global::Com.Virtuos.Rocket.NetworkMessage.BaseProtos.RegisterAllExtensions(registry);
+        global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.RegisterAllExtensions(registry);
         return registry;
       };
       pbd::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
           new pbd::FileDescriptor[] {
           global::Google.ProtocolBuffers.DescriptorProtos.CSharpOptions.Descriptor, 
-          global::Com.Virtuos.Rocket.NetworkMessage.BaseProtos.Descriptor, 
+          global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.Descriptor, 
           }, assigner);
     }
     #endregion
@@ -60,67 +83,226 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
   }
   #region Messages
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public sealed partial class ActionCommitedRequest : pb::GeneratedMessage<ActionCommitedRequest, ActionCommitedRequest.Builder> {
-    private ActionCommitedRequest() { }
-    private static readonly ActionCommitedRequest defaultInstance = new ActionCommitedRequest().MakeReadOnly();
-    private static readonly string[] _actionCommitedRequestFieldNames = new string[] { "game_id", "turn_index" };
-    private static readonly uint[] _actionCommitedRequestFieldTags = new uint[] { 16, 24 };
-    public static ActionCommitedRequest DefaultInstance {
+  public sealed partial class Player : pb::GeneratedMessage<Player, Player.Builder> {
+    private Player() { }
+    private static readonly Player defaultInstance = new Player().MakeReadOnly();
+    private static readonly string[] _playerFieldNames = new string[] { "avator", "banned", "blocked", "id", "karma", "language", "name", "nb_games", "rank", "rank_score", "ranks", "rights", "tz", "w_w_w_id" };
+    private static readonly uint[] _playerFieldTags = new uint[] { 82, 64, 72, 16, 24, 88, 10, 56, 48, 32, 106, 114, 98, 40 };
+    public static Player DefaultInstance {
       get { return defaultInstance; }
     }
     
-    public override ActionCommitedRequest DefaultInstanceForType {
+    public override Player DefaultInstanceForType {
       get { return DefaultInstance; }
     }
     
-    protected override ActionCommitedRequest ThisMessage {
+    protected override Player ThisMessage {
       get { return this; }
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.internal__static_virtuos_ActionCommitedRequest__Descriptor; }
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.internal__static_virtuos_Player__Descriptor; }
     }
     
-    protected override pb::FieldAccess.FieldAccessorTable<ActionCommitedRequest, ActionCommitedRequest.Builder> InternalFieldAccessors {
-      get { return global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.internal__static_virtuos_ActionCommitedRequest__FieldAccessorTable; }
+    protected override pb::FieldAccess.FieldAccessorTable<Player, Player.Builder> InternalFieldAccessors {
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.internal__static_virtuos_Player__FieldAccessorTable; }
     }
     
-    public const int RequestNumberFieldNumber = 523;
-    public static pb::GeneratedExtensionBase<global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest> RequestNumber;
-    public const int GameIdFieldNumber = 2;
-    private bool hasGameId;
-    private long gameId_;
-    public bool HasGameId {
-      get { return hasGameId; }
+    public const int NameFieldNumber = 1;
+    private bool hasName;
+    private string name_ = "";
+    public bool HasName {
+      get { return hasName; }
     }
-    public long GameId {
-      get { return gameId_; }
+    public string Name {
+      get { return name_; }
     }
     
-    public const int TurnIndexFieldNumber = 3;
-    private bool hasTurnIndex;
-    private int turnIndex_;
-    public bool HasTurnIndex {
-      get { return hasTurnIndex; }
+    public const int IdFieldNumber = 2;
+    private bool hasId;
+    private int id_;
+    public bool HasId {
+      get { return hasId; }
     }
-    public int TurnIndex {
-      get { return turnIndex_; }
+    public int Id {
+      get { return id_; }
+    }
+    
+    public const int KarmaFieldNumber = 3;
+    private bool hasKarma;
+    private int karma_;
+    public bool HasKarma {
+      get { return hasKarma; }
+    }
+    public int Karma {
+      get { return karma_; }
+    }
+    
+    public const int RankScoreFieldNumber = 4;
+    private bool hasRankScore;
+    private int rankScore_;
+    public bool HasRankScore {
+      get { return hasRankScore; }
+    }
+    public int RankScore {
+      get { return rankScore_; }
+    }
+    
+    public const int WWWIdFieldNumber = 5;
+    private bool hasWWWId;
+    private int wWWId_;
+    public bool HasWWWId {
+      get { return hasWWWId; }
+    }
+    public int WWWId {
+      get { return wWWId_; }
+    }
+    
+    public const int RankFieldNumber = 6;
+    private bool hasRank;
+    private int rank_;
+    public bool HasRank {
+      get { return hasRank; }
+    }
+    public int Rank {
+      get { return rank_; }
+    }
+    
+    public const int NbGamesFieldNumber = 7;
+    private bool hasNbGames;
+    private int nbGames_;
+    public bool HasNbGames {
+      get { return hasNbGames; }
+    }
+    public int NbGames {
+      get { return nbGames_; }
+    }
+    
+    public const int BannedFieldNumber = 8;
+    private bool hasBanned;
+    private bool banned_;
+    public bool HasBanned {
+      get { return hasBanned; }
+    }
+    public bool Banned {
+      get { return banned_; }
+    }
+    
+    public const int BlockedFieldNumber = 9;
+    private bool hasBlocked;
+    private bool blocked_;
+    public bool HasBlocked {
+      get { return hasBlocked; }
+    }
+    public bool Blocked {
+      get { return blocked_; }
+    }
+    
+    public const int AvatorFieldNumber = 10;
+    private bool hasAvator;
+    private global::Com.Virtuos.Rocket.NetworkMessage.Avator avator_;
+    public bool HasAvator {
+      get { return hasAvator; }
+    }
+    public global::Com.Virtuos.Rocket.NetworkMessage.Avator Avator {
+      get { return avator_ ?? global::Com.Virtuos.Rocket.NetworkMessage.Avator.DefaultInstance; }
+    }
+    
+    public const int LanguageFieldNumber = 11;
+    private bool hasLanguage;
+    private int language_;
+    public bool HasLanguage {
+      get { return hasLanguage; }
+    }
+    public int Language {
+      get { return language_; }
+    }
+    
+    public const int TzFieldNumber = 12;
+    private bool hasTz;
+    private string tz_ = "";
+    public bool HasTz {
+      get { return hasTz; }
+    }
+    public string Tz {
+      get { return tz_; }
+    }
+    
+    public const int RanksFieldNumber = 13;
+    private pbc::PopsicleList<global::Com.Virtuos.Rocket.NetworkMessage.Rank> ranks_ = new pbc::PopsicleList<global::Com.Virtuos.Rocket.NetworkMessage.Rank>();
+    public scg::IList<global::Com.Virtuos.Rocket.NetworkMessage.Rank> RanksList {
+      get { return ranks_; }
+    }
+    public int RanksCount {
+      get { return ranks_.Count; }
+    }
+    public global::Com.Virtuos.Rocket.NetworkMessage.Rank GetRanks(int index) {
+      return ranks_[index];
+    }
+    
+    public const int RightsFieldNumber = 14;
+    private bool hasRights;
+    private global::Com.Virtuos.Rocket.NetworkMessage.AccessRights rights_;
+    public bool HasRights {
+      get { return hasRights; }
+    }
+    public global::Com.Virtuos.Rocket.NetworkMessage.AccessRights Rights {
+      get { return rights_ ?? global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.DefaultInstance; }
     }
     
     public override bool IsInitialized {
       get {
+        if (!hasName) return false;
+        if (!hasId) return false;
+        if (!hasWWWId) return false;
         return true;
       }
     }
     
     public override void WriteTo(pb::ICodedOutputStream output) {
       CalcSerializedSize();
-      string[] field_names = _actionCommitedRequestFieldNames;
-      if (hasGameId) {
-        output.WriteInt64(2, field_names[0], GameId);
+      string[] field_names = _playerFieldNames;
+      if (hasName) {
+        output.WriteString(1, field_names[6], Name);
       }
-      if (hasTurnIndex) {
-        output.WriteInt32(3, field_names[1], TurnIndex);
+      if (hasId) {
+        output.WriteInt32(2, field_names[3], Id);
+      }
+      if (hasKarma) {
+        output.WriteInt32(3, field_names[4], Karma);
+      }
+      if (hasRankScore) {
+        output.WriteInt32(4, field_names[9], RankScore);
+      }
+      if (hasWWWId) {
+        output.WriteInt32(5, field_names[13], WWWId);
+      }
+      if (hasRank) {
+        output.WriteInt32(6, field_names[8], Rank);
+      }
+      if (hasNbGames) {
+        output.WriteInt32(7, field_names[7], NbGames);
+      }
+      if (hasBanned) {
+        output.WriteBool(8, field_names[1], Banned);
+      }
+      if (hasBlocked) {
+        output.WriteBool(9, field_names[2], Blocked);
+      }
+      if (hasAvator) {
+        output.WriteMessage(10, field_names[0], Avator);
+      }
+      if (hasLanguage) {
+        output.WriteInt32(11, field_names[5], Language);
+      }
+      if (hasTz) {
+        output.WriteString(12, field_names[12], Tz);
+      }
+      if (ranks_.Count > 0) {
+        output.WriteMessageArray(13, field_names[10], ranks_);
+      }
+      if (hasRights) {
+        output.WriteMessage(14, field_names[11], Rights);
       }
       UnknownFields.WriteTo(output);
     }
@@ -139,59 +321,96 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
       if (size != -1) return size;
       
       size = 0;
-      if (hasGameId) {
-        size += pb::CodedOutputStream.ComputeInt64Size(2, GameId);
+      if (hasName) {
+        size += pb::CodedOutputStream.ComputeStringSize(1, Name);
       }
-      if (hasTurnIndex) {
-        size += pb::CodedOutputStream.ComputeInt32Size(3, TurnIndex);
+      if (hasId) {
+        size += pb::CodedOutputStream.ComputeInt32Size(2, Id);
+      }
+      if (hasKarma) {
+        size += pb::CodedOutputStream.ComputeInt32Size(3, Karma);
+      }
+      if (hasRankScore) {
+        size += pb::CodedOutputStream.ComputeInt32Size(4, RankScore);
+      }
+      if (hasWWWId) {
+        size += pb::CodedOutputStream.ComputeInt32Size(5, WWWId);
+      }
+      if (hasRank) {
+        size += pb::CodedOutputStream.ComputeInt32Size(6, Rank);
+      }
+      if (hasNbGames) {
+        size += pb::CodedOutputStream.ComputeInt32Size(7, NbGames);
+      }
+      if (hasBanned) {
+        size += pb::CodedOutputStream.ComputeBoolSize(8, Banned);
+      }
+      if (hasBlocked) {
+        size += pb::CodedOutputStream.ComputeBoolSize(9, Blocked);
+      }
+      if (hasAvator) {
+        size += pb::CodedOutputStream.ComputeMessageSize(10, Avator);
+      }
+      if (hasLanguage) {
+        size += pb::CodedOutputStream.ComputeInt32Size(11, Language);
+      }
+      if (hasTz) {
+        size += pb::CodedOutputStream.ComputeStringSize(12, Tz);
+      }
+      foreach (global::Com.Virtuos.Rocket.NetworkMessage.Rank element in RanksList) {
+        size += pb::CodedOutputStream.ComputeMessageSize(13, element);
+      }
+      if (hasRights) {
+        size += pb::CodedOutputStream.ComputeMessageSize(14, Rights);
       }
       size += UnknownFields.SerializedSize;
       memoizedSerializedSize = size;
       return size;
     }
-    public static ActionCommitedRequest ParseFrom(pb::ByteString data) {
+    public static Player ParseFrom(pb::ByteString data) {
       return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
     }
-    public static ActionCommitedRequest ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
+    public static Player ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
       return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
     }
-    public static ActionCommitedRequest ParseFrom(byte[] data) {
+    public static Player ParseFrom(byte[] data) {
       return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
     }
-    public static ActionCommitedRequest ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
+    public static Player ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
       return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
     }
-    public static ActionCommitedRequest ParseFrom(global::System.IO.Stream input) {
+    public static Player ParseFrom(global::System.IO.Stream input) {
       return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
     }
-    public static ActionCommitedRequest ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+    public static Player ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
       return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
     }
-    public static ActionCommitedRequest ParseDelimitedFrom(global::System.IO.Stream input) {
+    public static Player ParseDelimitedFrom(global::System.IO.Stream input) {
       return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
     }
-    public static ActionCommitedRequest ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+    public static Player ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
       return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
     }
-    public static ActionCommitedRequest ParseFrom(pb::ICodedInputStream input) {
+    public static Player ParseFrom(pb::ICodedInputStream input) {
       return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
     }
-    public static ActionCommitedRequest ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+    public static Player ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
       return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
     }
-    private ActionCommitedRequest MakeReadOnly() {
+    private Player MakeReadOnly() {
+      ranks_.MakeReadOnly();
       return this;
     }
     
     public static Builder CreateBuilder() { return new Builder(); }
     public override Builder ToBuilder() { return CreateBuilder(this); }
     public override Builder CreateBuilderForType() { return new Builder(); }
-    public static Builder CreateBuilder(ActionCommitedRequest prototype) {
+    public static Builder CreateBuilder(Player prototype) {
       return new Builder(prototype);
     }
     
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public sealed partial class Builder : pb::GeneratedBuilder<ActionCommitedRequest, Builder> {
+    public sealed partial class Builder : pb::GeneratedBuilder<Player, Builder> {
       protected override Builder ThisBuilder {
         get { return this; }
       }
@@ -199,18 +418,18 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
         result = DefaultInstance;
         resultIsReadOnly = true;
       }
-      internal Builder(ActionCommitedRequest cloneFrom) {
+      internal Builder(Player cloneFrom) {
         result = cloneFrom;
         resultIsReadOnly = true;
       }
       
       private bool resultIsReadOnly;
-      private ActionCommitedRequest result;
+      private Player result;
       
-      private ActionCommitedRequest PrepareBuilder() {
+      private Player PrepareBuilder() {
         if (resultIsReadOnly) {
-          ActionCommitedRequest original = result;
-          result = new ActionCommitedRequest();
+          Player original = result;
+          result = new Player();
           resultIsReadOnly = false;
           MergeFrom(original);
         }
@@ -221,7 +440,7 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
         get { return result.IsInitialized; }
       }
       
-      protected override ActionCommitedRequest MessageBeingBuilt {
+      protected override Player MessageBeingBuilt {
         get { return PrepareBuilder(); }
       }
       
@@ -240,14 +459,14 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
       }
       
       public override pbd::MessageDescriptor DescriptorForType {
-        get { return global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest.Descriptor; }
+        get { return global::Com.Virtuos.Rocket.NetworkMessage.Player.Descriptor; }
       }
       
-      public override ActionCommitedRequest DefaultInstanceForType {
-        get { return global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest.DefaultInstance; }
+      public override Player DefaultInstanceForType {
+        get { return global::Com.Virtuos.Rocket.NetworkMessage.Player.DefaultInstance; }
       }
       
-      public override ActionCommitedRequest BuildPartial() {
+      public override Player BuildPartial() {
         if (resultIsReadOnly) {
           return result;
         }
@@ -256,22 +475,58 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
       }
       
       public override Builder MergeFrom(pb::IMessage other) {
-        if (other is ActionCommitedRequest) {
-          return MergeFrom((ActionCommitedRequest) other);
+        if (other is Player) {
+          return MergeFrom((Player) other);
         } else {
           base.MergeFrom(other);
           return this;
         }
       }
       
-      public override Builder MergeFrom(ActionCommitedRequest other) {
-        if (other == global::Com.Virtuos.Rocket.NetworkMessage.ActionCommitedRequest.DefaultInstance) return this;
+      public override Builder MergeFrom(Player other) {
+        if (other == global::Com.Virtuos.Rocket.NetworkMessage.Player.DefaultInstance) return this;
         PrepareBuilder();
-        if (other.HasGameId) {
-          GameId = other.GameId;
+        if (other.HasName) {
+          Name = other.Name;
         }
-        if (other.HasTurnIndex) {
-          TurnIndex = other.TurnIndex;
+        if (other.HasId) {
+          Id = other.Id;
+        }
+        if (other.HasKarma) {
+          Karma = other.Karma;
+        }
+        if (other.HasRankScore) {
+          RankScore = other.RankScore;
+        }
+        if (other.HasWWWId) {
+          WWWId = other.WWWId;
+        }
+        if (other.HasRank) {
+          Rank = other.Rank;
+        }
+        if (other.HasNbGames) {
+          NbGames = other.NbGames;
+        }
+        if (other.HasBanned) {
+          Banned = other.Banned;
+        }
+        if (other.HasBlocked) {
+          Blocked = other.Blocked;
+        }
+        if (other.HasAvator) {
+          MergeAvator(other.Avator);
+        }
+        if (other.HasLanguage) {
+          Language = other.Language;
+        }
+        if (other.HasTz) {
+          Tz = other.Tz;
+        }
+        if (other.ranks_.Count != 0) {
+          result.ranks_.Add(other.ranks_);
+        }
+        if (other.HasRights) {
+          MergeRights(other.Rights);
         }
         this.MergeUnknownFields(other.UnknownFields);
         return this;
@@ -288,9 +543,9 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
         string field_name;
         while (input.ReadTag(out tag, out field_name)) {
           if(tag == 0 && field_name != null) {
-            int field_ordinal = global::System.Array.BinarySearch(_actionCommitedRequestFieldNames, field_name, global::System.StringComparer.Ordinal);
+            int field_ordinal = global::System.Array.BinarySearch(_playerFieldNames, field_name, global::System.StringComparer.Ordinal);
             if(field_ordinal >= 0)
-              tag = _actionCommitedRequestFieldTags[field_ordinal];
+              tag = _playerFieldTags[field_ordinal];
             else {
               if (unknownFields == null) {
                 unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
@@ -316,12 +571,70 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
               ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
               break;
             }
+            case 10: {
+              result.hasName = input.ReadString(ref result.name_);
+              break;
+            }
             case 16: {
-              result.hasGameId = input.ReadInt64(ref result.gameId_);
+              result.hasId = input.ReadInt32(ref result.id_);
               break;
             }
             case 24: {
-              result.hasTurnIndex = input.ReadInt32(ref result.turnIndex_);
+              result.hasKarma = input.ReadInt32(ref result.karma_);
+              break;
+            }
+            case 32: {
+              result.hasRankScore = input.ReadInt32(ref result.rankScore_);
+              break;
+            }
+            case 40: {
+              result.hasWWWId = input.ReadInt32(ref result.wWWId_);
+              break;
+            }
+            case 48: {
+              result.hasRank = input.ReadInt32(ref result.rank_);
+              break;
+            }
+            case 56: {
+              result.hasNbGames = input.ReadInt32(ref result.nbGames_);
+              break;
+            }
+            case 64: {
+              result.hasBanned = input.ReadBool(ref result.banned_);
+              break;
+            }
+            case 72: {
+              result.hasBlocked = input.ReadBool(ref result.blocked_);
+              break;
+            }
+            case 82: {
+              global::Com.Virtuos.Rocket.NetworkMessage.Avator.Builder subBuilder = global::Com.Virtuos.Rocket.NetworkMessage.Avator.CreateBuilder();
+              if (result.hasAvator) {
+                subBuilder.MergeFrom(Avator);
+              }
+              input.ReadMessage(subBuilder, extensionRegistry);
+              Avator = subBuilder.BuildPartial();
+              break;
+            }
+            case 88: {
+              result.hasLanguage = input.ReadInt32(ref result.language_);
+              break;
+            }
+            case 98: {
+              result.hasTz = input.ReadString(ref result.tz_);
+              break;
+            }
+            case 106: {
+              input.ReadMessageArray(tag, field_name, result.ranks_, global::Com.Virtuos.Rocket.NetworkMessage.Rank.DefaultInstance, extensionRegistry);
+              break;
+            }
+            case 114: {
+              global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.Builder subBuilder = global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.CreateBuilder();
+              if (result.hasRights) {
+                subBuilder.MergeFrom(Rights);
+              }
+              input.ReadMessage(subBuilder, extensionRegistry);
+              Rights = subBuilder.BuildPartial();
               break;
             }
           }
@@ -334,47 +647,1441 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
       }
       
       
-      public bool HasGameId {
-        get { return result.hasGameId; }
+      public bool HasName {
+        get { return result.hasName; }
       }
-      public long GameId {
-        get { return result.GameId; }
-        set { SetGameId(value); }
+      public string Name {
+        get { return result.Name; }
+        set { SetName(value); }
       }
-      public Builder SetGameId(long value) {
+      public Builder SetName(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
         PrepareBuilder();
-        result.hasGameId = true;
-        result.gameId_ = value;
+        result.hasName = true;
+        result.name_ = value;
         return this;
       }
-      public Builder ClearGameId() {
+      public Builder ClearName() {
         PrepareBuilder();
-        result.hasGameId = false;
-        result.gameId_ = 0L;
+        result.hasName = false;
+        result.name_ = "";
         return this;
       }
       
-      public bool HasTurnIndex {
-        get { return result.hasTurnIndex; }
+      public bool HasId {
+        get { return result.hasId; }
       }
-      public int TurnIndex {
-        get { return result.TurnIndex; }
-        set { SetTurnIndex(value); }
+      public int Id {
+        get { return result.Id; }
+        set { SetId(value); }
       }
-      public Builder SetTurnIndex(int value) {
+      public Builder SetId(int value) {
         PrepareBuilder();
-        result.hasTurnIndex = true;
-        result.turnIndex_ = value;
+        result.hasId = true;
+        result.id_ = value;
         return this;
       }
-      public Builder ClearTurnIndex() {
+      public Builder ClearId() {
         PrepareBuilder();
-        result.hasTurnIndex = false;
-        result.turnIndex_ = 0;
+        result.hasId = false;
+        result.id_ = 0;
+        return this;
+      }
+      
+      public bool HasKarma {
+        get { return result.hasKarma; }
+      }
+      public int Karma {
+        get { return result.Karma; }
+        set { SetKarma(value); }
+      }
+      public Builder SetKarma(int value) {
+        PrepareBuilder();
+        result.hasKarma = true;
+        result.karma_ = value;
+        return this;
+      }
+      public Builder ClearKarma() {
+        PrepareBuilder();
+        result.hasKarma = false;
+        result.karma_ = 0;
+        return this;
+      }
+      
+      public bool HasRankScore {
+        get { return result.hasRankScore; }
+      }
+      public int RankScore {
+        get { return result.RankScore; }
+        set { SetRankScore(value); }
+      }
+      public Builder SetRankScore(int value) {
+        PrepareBuilder();
+        result.hasRankScore = true;
+        result.rankScore_ = value;
+        return this;
+      }
+      public Builder ClearRankScore() {
+        PrepareBuilder();
+        result.hasRankScore = false;
+        result.rankScore_ = 0;
+        return this;
+      }
+      
+      public bool HasWWWId {
+        get { return result.hasWWWId; }
+      }
+      public int WWWId {
+        get { return result.WWWId; }
+        set { SetWWWId(value); }
+      }
+      public Builder SetWWWId(int value) {
+        PrepareBuilder();
+        result.hasWWWId = true;
+        result.wWWId_ = value;
+        return this;
+      }
+      public Builder ClearWWWId() {
+        PrepareBuilder();
+        result.hasWWWId = false;
+        result.wWWId_ = 0;
+        return this;
+      }
+      
+      public bool HasRank {
+        get { return result.hasRank; }
+      }
+      public int Rank {
+        get { return result.Rank; }
+        set { SetRank(value); }
+      }
+      public Builder SetRank(int value) {
+        PrepareBuilder();
+        result.hasRank = true;
+        result.rank_ = value;
+        return this;
+      }
+      public Builder ClearRank() {
+        PrepareBuilder();
+        result.hasRank = false;
+        result.rank_ = 0;
+        return this;
+      }
+      
+      public bool HasNbGames {
+        get { return result.hasNbGames; }
+      }
+      public int NbGames {
+        get { return result.NbGames; }
+        set { SetNbGames(value); }
+      }
+      public Builder SetNbGames(int value) {
+        PrepareBuilder();
+        result.hasNbGames = true;
+        result.nbGames_ = value;
+        return this;
+      }
+      public Builder ClearNbGames() {
+        PrepareBuilder();
+        result.hasNbGames = false;
+        result.nbGames_ = 0;
+        return this;
+      }
+      
+      public bool HasBanned {
+        get { return result.hasBanned; }
+      }
+      public bool Banned {
+        get { return result.Banned; }
+        set { SetBanned(value); }
+      }
+      public Builder SetBanned(bool value) {
+        PrepareBuilder();
+        result.hasBanned = true;
+        result.banned_ = value;
+        return this;
+      }
+      public Builder ClearBanned() {
+        PrepareBuilder();
+        result.hasBanned = false;
+        result.banned_ = false;
+        return this;
+      }
+      
+      public bool HasBlocked {
+        get { return result.hasBlocked; }
+      }
+      public bool Blocked {
+        get { return result.Blocked; }
+        set { SetBlocked(value); }
+      }
+      public Builder SetBlocked(bool value) {
+        PrepareBuilder();
+        result.hasBlocked = true;
+        result.blocked_ = value;
+        return this;
+      }
+      public Builder ClearBlocked() {
+        PrepareBuilder();
+        result.hasBlocked = false;
+        result.blocked_ = false;
+        return this;
+      }
+      
+      public bool HasAvator {
+       get { return result.hasAvator; }
+      }
+      public global::Com.Virtuos.Rocket.NetworkMessage.Avator Avator {
+        get { return result.Avator; }
+        set { SetAvator(value); }
+      }
+      public Builder SetAvator(global::Com.Virtuos.Rocket.NetworkMessage.Avator value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasAvator = true;
+        result.avator_ = value;
+        return this;
+      }
+      public Builder SetAvator(global::Com.Virtuos.Rocket.NetworkMessage.Avator.Builder builderForValue) {
+        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
+        PrepareBuilder();
+        result.hasAvator = true;
+        result.avator_ = builderForValue.Build();
+        return this;
+      }
+      public Builder MergeAvator(global::Com.Virtuos.Rocket.NetworkMessage.Avator value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        if (result.hasAvator &&
+            result.avator_ != global::Com.Virtuos.Rocket.NetworkMessage.Avator.DefaultInstance) {
+            result.avator_ = global::Com.Virtuos.Rocket.NetworkMessage.Avator.CreateBuilder(result.avator_).MergeFrom(value).BuildPartial();
+        } else {
+          result.avator_ = value;
+        }
+        result.hasAvator = true;
+        return this;
+      }
+      public Builder ClearAvator() {
+        PrepareBuilder();
+        result.hasAvator = false;
+        result.avator_ = null;
+        return this;
+      }
+      
+      public bool HasLanguage {
+        get { return result.hasLanguage; }
+      }
+      public int Language {
+        get { return result.Language; }
+        set { SetLanguage(value); }
+      }
+      public Builder SetLanguage(int value) {
+        PrepareBuilder();
+        result.hasLanguage = true;
+        result.language_ = value;
+        return this;
+      }
+      public Builder ClearLanguage() {
+        PrepareBuilder();
+        result.hasLanguage = false;
+        result.language_ = 0;
+        return this;
+      }
+      
+      public bool HasTz {
+        get { return result.hasTz; }
+      }
+      public string Tz {
+        get { return result.Tz; }
+        set { SetTz(value); }
+      }
+      public Builder SetTz(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasTz = true;
+        result.tz_ = value;
+        return this;
+      }
+      public Builder ClearTz() {
+        PrepareBuilder();
+        result.hasTz = false;
+        result.tz_ = "";
+        return this;
+      }
+      
+      public pbc::IPopsicleList<global::Com.Virtuos.Rocket.NetworkMessage.Rank> RanksList {
+        get { return PrepareBuilder().ranks_; }
+      }
+      public int RanksCount {
+        get { return result.RanksCount; }
+      }
+      public global::Com.Virtuos.Rocket.NetworkMessage.Rank GetRanks(int index) {
+        return result.GetRanks(index);
+      }
+      public Builder SetRanks(int index, global::Com.Virtuos.Rocket.NetworkMessage.Rank value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.ranks_[index] = value;
+        return this;
+      }
+      public Builder SetRanks(int index, global::Com.Virtuos.Rocket.NetworkMessage.Rank.Builder builderForValue) {
+        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
+        PrepareBuilder();
+        result.ranks_[index] = builderForValue.Build();
+        return this;
+      }
+      public Builder AddRanks(global::Com.Virtuos.Rocket.NetworkMessage.Rank value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.ranks_.Add(value);
+        return this;
+      }
+      public Builder AddRanks(global::Com.Virtuos.Rocket.NetworkMessage.Rank.Builder builderForValue) {
+        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
+        PrepareBuilder();
+        result.ranks_.Add(builderForValue.Build());
+        return this;
+      }
+      public Builder AddRangeRanks(scg::IEnumerable<global::Com.Virtuos.Rocket.NetworkMessage.Rank> values) {
+        PrepareBuilder();
+        result.ranks_.Add(values);
+        return this;
+      }
+      public Builder ClearRanks() {
+        PrepareBuilder();
+        result.ranks_.Clear();
+        return this;
+      }
+      
+      public bool HasRights {
+       get { return result.hasRights; }
+      }
+      public global::Com.Virtuos.Rocket.NetworkMessage.AccessRights Rights {
+        get { return result.Rights; }
+        set { SetRights(value); }
+      }
+      public Builder SetRights(global::Com.Virtuos.Rocket.NetworkMessage.AccessRights value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasRights = true;
+        result.rights_ = value;
+        return this;
+      }
+      public Builder SetRights(global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.Builder builderForValue) {
+        pb::ThrowHelper.ThrowIfNull(builderForValue, "builderForValue");
+        PrepareBuilder();
+        result.hasRights = true;
+        result.rights_ = builderForValue.Build();
+        return this;
+      }
+      public Builder MergeRights(global::Com.Virtuos.Rocket.NetworkMessage.AccessRights value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        if (result.hasRights &&
+            result.rights_ != global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.DefaultInstance) {
+            result.rights_ = global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.CreateBuilder(result.rights_).MergeFrom(value).BuildPartial();
+        } else {
+          result.rights_ = value;
+        }
+        result.hasRights = true;
+        return this;
+      }
+      public Builder ClearRights() {
+        PrepareBuilder();
+        result.hasRights = false;
+        result.rights_ = null;
         return this;
       }
     }
-    static ActionCommitedRequest() {
+    static Player() {
+      object.ReferenceEquals(global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.Descriptor, null);
+    }
+  }
+  
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class Avator : pb::GeneratedMessage<Avator, Avator.Builder> {
+    private Avator() { }
+    private static readonly Avator defaultInstance = new Avator().MakeReadOnly();
+    private static readonly string[] _avatorFieldNames = new string[] { "id", "image", "location" };
+    private static readonly uint[] _avatorFieldTags = new uint[] { 8, 26, 18 };
+    public static Avator DefaultInstance {
+      get { return defaultInstance; }
+    }
+    
+    public override Avator DefaultInstanceForType {
+      get { return DefaultInstance; }
+    }
+    
+    protected override Avator ThisMessage {
+      get { return this; }
+    }
+    
+    public static pbd::MessageDescriptor Descriptor {
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.internal__static_virtuos_Avator__Descriptor; }
+    }
+    
+    protected override pb::FieldAccess.FieldAccessorTable<Avator, Avator.Builder> InternalFieldAccessors {
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.internal__static_virtuos_Avator__FieldAccessorTable; }
+    }
+    
+    public const int IdFieldNumber = 1;
+    private bool hasId;
+    private int id_;
+    public bool HasId {
+      get { return hasId; }
+    }
+    public int Id {
+      get { return id_; }
+    }
+    
+    public const int LocationFieldNumber = 2;
+    private bool hasLocation;
+    private string location_ = "";
+    public bool HasLocation {
+      get { return hasLocation; }
+    }
+    public string Location {
+      get { return location_; }
+    }
+    
+    public const int ImageFieldNumber = 3;
+    private bool hasImage;
+    private string image_ = "";
+    public bool HasImage {
+      get { return hasImage; }
+    }
+    public string Image {
+      get { return image_; }
+    }
+    
+    public override bool IsInitialized {
+      get {
+        return true;
+      }
+    }
+    
+    public override void WriteTo(pb::ICodedOutputStream output) {
+      CalcSerializedSize();
+      string[] field_names = _avatorFieldNames;
+      if (hasId) {
+        output.WriteInt32(1, field_names[0], Id);
+      }
+      if (hasLocation) {
+        output.WriteString(2, field_names[2], Location);
+      }
+      if (hasImage) {
+        output.WriteString(3, field_names[1], Image);
+      }
+      UnknownFields.WriteTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public override int SerializedSize {
+      get {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+        return CalcSerializedSize();
+      }
+    }
+    
+    private int CalcSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+      
+      size = 0;
+      if (hasId) {
+        size += pb::CodedOutputStream.ComputeInt32Size(1, Id);
+      }
+      if (hasLocation) {
+        size += pb::CodedOutputStream.ComputeStringSize(2, Location);
+      }
+      if (hasImage) {
+        size += pb::CodedOutputStream.ComputeStringSize(3, Image);
+      }
+      size += UnknownFields.SerializedSize;
+      memoizedSerializedSize = size;
+      return size;
+    }
+    public static Avator ParseFrom(pb::ByteString data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static Avator ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static Avator ParseFrom(byte[] data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static Avator ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static Avator ParseFrom(global::System.IO.Stream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static Avator ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    public static Avator ParseDelimitedFrom(global::System.IO.Stream input) {
+      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
+    }
+    public static Avator ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
+    }
+    public static Avator ParseFrom(pb::ICodedInputStream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static Avator ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    private Avator MakeReadOnly() {
+      return this;
+    }
+    
+    public static Builder CreateBuilder() { return new Builder(); }
+    public override Builder ToBuilder() { return CreateBuilder(this); }
+    public override Builder CreateBuilderForType() { return new Builder(); }
+    public static Builder CreateBuilder(Avator prototype) {
+      return new Builder(prototype);
+    }
+    
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public sealed partial class Builder : pb::GeneratedBuilder<Avator, Builder> {
+      protected override Builder ThisBuilder {
+        get { return this; }
+      }
+      public Builder() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+      }
+      internal Builder(Avator cloneFrom) {
+        result = cloneFrom;
+        resultIsReadOnly = true;
+      }
+      
+      private bool resultIsReadOnly;
+      private Avator result;
+      
+      private Avator PrepareBuilder() {
+        if (resultIsReadOnly) {
+          Avator original = result;
+          result = new Avator();
+          resultIsReadOnly = false;
+          MergeFrom(original);
+        }
+        return result;
+      }
+      
+      public override bool IsInitialized {
+        get { return result.IsInitialized; }
+      }
+      
+      protected override Avator MessageBeingBuilt {
+        get { return PrepareBuilder(); }
+      }
+      
+      public override Builder Clear() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+        return this;
+      }
+      
+      public override Builder Clone() {
+        if (resultIsReadOnly) {
+          return new Builder(result);
+        } else {
+          return new Builder().MergeFrom(result);
+        }
+      }
+      
+      public override pbd::MessageDescriptor DescriptorForType {
+        get { return global::Com.Virtuos.Rocket.NetworkMessage.Avator.Descriptor; }
+      }
+      
+      public override Avator DefaultInstanceForType {
+        get { return global::Com.Virtuos.Rocket.NetworkMessage.Avator.DefaultInstance; }
+      }
+      
+      public override Avator BuildPartial() {
+        if (resultIsReadOnly) {
+          return result;
+        }
+        resultIsReadOnly = true;
+        return result.MakeReadOnly();
+      }
+      
+      public override Builder MergeFrom(pb::IMessage other) {
+        if (other is Avator) {
+          return MergeFrom((Avator) other);
+        } else {
+          base.MergeFrom(other);
+          return this;
+        }
+      }
+      
+      public override Builder MergeFrom(Avator other) {
+        if (other == global::Com.Virtuos.Rocket.NetworkMessage.Avator.DefaultInstance) return this;
+        PrepareBuilder();
+        if (other.HasId) {
+          Id = other.Id;
+        }
+        if (other.HasLocation) {
+          Location = other.Location;
+        }
+        if (other.HasImage) {
+          Image = other.Image;
+        }
+        this.MergeUnknownFields(other.UnknownFields);
+        return this;
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input) {
+        return MergeFrom(input, pb::ExtensionRegistry.Empty);
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+        PrepareBuilder();
+        pb::UnknownFieldSet.Builder unknownFields = null;
+        uint tag;
+        string field_name;
+        while (input.ReadTag(out tag, out field_name)) {
+          if(tag == 0 && field_name != null) {
+            int field_ordinal = global::System.Array.BinarySearch(_avatorFieldNames, field_name, global::System.StringComparer.Ordinal);
+            if(field_ordinal >= 0)
+              tag = _avatorFieldTags[field_ordinal];
+            else {
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              continue;
+            }
+          }
+          switch (tag) {
+            case 0: {
+              throw pb::InvalidProtocolBufferException.InvalidTag();
+            }
+            default: {
+              if (pb::WireFormat.IsEndGroupTag(tag)) {
+                if (unknownFields != null) {
+                  this.UnknownFields = unknownFields.Build();
+                }
+                return this;
+              }
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              break;
+            }
+            case 8: {
+              result.hasId = input.ReadInt32(ref result.id_);
+              break;
+            }
+            case 18: {
+              result.hasLocation = input.ReadString(ref result.location_);
+              break;
+            }
+            case 26: {
+              result.hasImage = input.ReadString(ref result.image_);
+              break;
+            }
+          }
+        }
+        
+        if (unknownFields != null) {
+          this.UnknownFields = unknownFields.Build();
+        }
+        return this;
+      }
+      
+      
+      public bool HasId {
+        get { return result.hasId; }
+      }
+      public int Id {
+        get { return result.Id; }
+        set { SetId(value); }
+      }
+      public Builder SetId(int value) {
+        PrepareBuilder();
+        result.hasId = true;
+        result.id_ = value;
+        return this;
+      }
+      public Builder ClearId() {
+        PrepareBuilder();
+        result.hasId = false;
+        result.id_ = 0;
+        return this;
+      }
+      
+      public bool HasLocation {
+        get { return result.hasLocation; }
+      }
+      public string Location {
+        get { return result.Location; }
+        set { SetLocation(value); }
+      }
+      public Builder SetLocation(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasLocation = true;
+        result.location_ = value;
+        return this;
+      }
+      public Builder ClearLocation() {
+        PrepareBuilder();
+        result.hasLocation = false;
+        result.location_ = "";
+        return this;
+      }
+      
+      public bool HasImage {
+        get { return result.hasImage; }
+      }
+      public string Image {
+        get { return result.Image; }
+        set { SetImage(value); }
+      }
+      public Builder SetImage(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasImage = true;
+        result.image_ = value;
+        return this;
+      }
+      public Builder ClearImage() {
+        PrepareBuilder();
+        result.hasImage = false;
+        result.image_ = "";
+        return this;
+      }
+    }
+    static Avator() {
+      object.ReferenceEquals(global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.Descriptor, null);
+    }
+  }
+  
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class Rank : pb::GeneratedMessage<Rank, Rank.Builder> {
+    private Rank() { }
+    private static readonly Rank defaultInstance = new Rank().MakeReadOnly();
+    private static readonly string[] _rankFieldNames = new string[] { "name", "nb_games", "rank", "rank_score" };
+    private static readonly uint[] _rankFieldTags = new uint[] { 26, 32, 8, 21 };
+    public static Rank DefaultInstance {
+      get { return defaultInstance; }
+    }
+    
+    public override Rank DefaultInstanceForType {
+      get { return DefaultInstance; }
+    }
+    
+    protected override Rank ThisMessage {
+      get { return this; }
+    }
+    
+    public static pbd::MessageDescriptor Descriptor {
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.internal__static_virtuos_Rank__Descriptor; }
+    }
+    
+    protected override pb::FieldAccess.FieldAccessorTable<Rank, Rank.Builder> InternalFieldAccessors {
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.internal__static_virtuos_Rank__FieldAccessorTable; }
+    }
+    
+    public const int Rank_FieldNumber = 1;
+    private bool hasRank_;
+    private int rank_;
+    public bool HasRank_ {
+      get { return hasRank_; }
+    }
+    public int Rank_ {
+      get { return rank_; }
+    }
+    
+    public const int RankScoreFieldNumber = 2;
+    private bool hasRankScore;
+    private float rankScore_;
+    public bool HasRankScore {
+      get { return hasRankScore; }
+    }
+    public float RankScore {
+      get { return rankScore_; }
+    }
+    
+    public const int NameFieldNumber = 3;
+    private bool hasName;
+    private string name_ = "";
+    public bool HasName {
+      get { return hasName; }
+    }
+    public string Name {
+      get { return name_; }
+    }
+    
+    public const int NbGamesFieldNumber = 4;
+    private bool hasNbGames;
+    private int nbGames_;
+    public bool HasNbGames {
+      get { return hasNbGames; }
+    }
+    public int NbGames {
+      get { return nbGames_; }
+    }
+    
+    public override bool IsInitialized {
+      get {
+        return true;
+      }
+    }
+    
+    public override void WriteTo(pb::ICodedOutputStream output) {
+      CalcSerializedSize();
+      string[] field_names = _rankFieldNames;
+      if (hasRank_) {
+        output.WriteInt32(1, field_names[2], Rank_);
+      }
+      if (hasRankScore) {
+        output.WriteFloat(2, field_names[3], RankScore);
+      }
+      if (hasName) {
+        output.WriteString(3, field_names[0], Name);
+      }
+      if (hasNbGames) {
+        output.WriteInt32(4, field_names[1], NbGames);
+      }
+      UnknownFields.WriteTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public override int SerializedSize {
+      get {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+        return CalcSerializedSize();
+      }
+    }
+    
+    private int CalcSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+      
+      size = 0;
+      if (hasRank_) {
+        size += pb::CodedOutputStream.ComputeInt32Size(1, Rank_);
+      }
+      if (hasRankScore) {
+        size += pb::CodedOutputStream.ComputeFloatSize(2, RankScore);
+      }
+      if (hasName) {
+        size += pb::CodedOutputStream.ComputeStringSize(3, Name);
+      }
+      if (hasNbGames) {
+        size += pb::CodedOutputStream.ComputeInt32Size(4, NbGames);
+      }
+      size += UnknownFields.SerializedSize;
+      memoizedSerializedSize = size;
+      return size;
+    }
+    public static Rank ParseFrom(pb::ByteString data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static Rank ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static Rank ParseFrom(byte[] data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static Rank ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static Rank ParseFrom(global::System.IO.Stream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static Rank ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    public static Rank ParseDelimitedFrom(global::System.IO.Stream input) {
+      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
+    }
+    public static Rank ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
+    }
+    public static Rank ParseFrom(pb::ICodedInputStream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static Rank ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    private Rank MakeReadOnly() {
+      return this;
+    }
+    
+    public static Builder CreateBuilder() { return new Builder(); }
+    public override Builder ToBuilder() { return CreateBuilder(this); }
+    public override Builder CreateBuilderForType() { return new Builder(); }
+    public static Builder CreateBuilder(Rank prototype) {
+      return new Builder(prototype);
+    }
+    
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public sealed partial class Builder : pb::GeneratedBuilder<Rank, Builder> {
+      protected override Builder ThisBuilder {
+        get { return this; }
+      }
+      public Builder() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+      }
+      internal Builder(Rank cloneFrom) {
+        result = cloneFrom;
+        resultIsReadOnly = true;
+      }
+      
+      private bool resultIsReadOnly;
+      private Rank result;
+      
+      private Rank PrepareBuilder() {
+        if (resultIsReadOnly) {
+          Rank original = result;
+          result = new Rank();
+          resultIsReadOnly = false;
+          MergeFrom(original);
+        }
+        return result;
+      }
+      
+      public override bool IsInitialized {
+        get { return result.IsInitialized; }
+      }
+      
+      protected override Rank MessageBeingBuilt {
+        get { return PrepareBuilder(); }
+      }
+      
+      public override Builder Clear() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+        return this;
+      }
+      
+      public override Builder Clone() {
+        if (resultIsReadOnly) {
+          return new Builder(result);
+        } else {
+          return new Builder().MergeFrom(result);
+        }
+      }
+      
+      public override pbd::MessageDescriptor DescriptorForType {
+        get { return global::Com.Virtuos.Rocket.NetworkMessage.Rank.Descriptor; }
+      }
+      
+      public override Rank DefaultInstanceForType {
+        get { return global::Com.Virtuos.Rocket.NetworkMessage.Rank.DefaultInstance; }
+      }
+      
+      public override Rank BuildPartial() {
+        if (resultIsReadOnly) {
+          return result;
+        }
+        resultIsReadOnly = true;
+        return result.MakeReadOnly();
+      }
+      
+      public override Builder MergeFrom(pb::IMessage other) {
+        if (other is Rank) {
+          return MergeFrom((Rank) other);
+        } else {
+          base.MergeFrom(other);
+          return this;
+        }
+      }
+      
+      public override Builder MergeFrom(Rank other) {
+        if (other == global::Com.Virtuos.Rocket.NetworkMessage.Rank.DefaultInstance) return this;
+        PrepareBuilder();
+        if (other.HasRank_) {
+          Rank_ = other.Rank_;
+        }
+        if (other.HasRankScore) {
+          RankScore = other.RankScore;
+        }
+        if (other.HasName) {
+          Name = other.Name;
+        }
+        if (other.HasNbGames) {
+          NbGames = other.NbGames;
+        }
+        this.MergeUnknownFields(other.UnknownFields);
+        return this;
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input) {
+        return MergeFrom(input, pb::ExtensionRegistry.Empty);
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+        PrepareBuilder();
+        pb::UnknownFieldSet.Builder unknownFields = null;
+        uint tag;
+        string field_name;
+        while (input.ReadTag(out tag, out field_name)) {
+          if(tag == 0 && field_name != null) {
+            int field_ordinal = global::System.Array.BinarySearch(_rankFieldNames, field_name, global::System.StringComparer.Ordinal);
+            if(field_ordinal >= 0)
+              tag = _rankFieldTags[field_ordinal];
+            else {
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              continue;
+            }
+          }
+          switch (tag) {
+            case 0: {
+              throw pb::InvalidProtocolBufferException.InvalidTag();
+            }
+            default: {
+              if (pb::WireFormat.IsEndGroupTag(tag)) {
+                if (unknownFields != null) {
+                  this.UnknownFields = unknownFields.Build();
+                }
+                return this;
+              }
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              break;
+            }
+            case 8: {
+              result.hasRank_ = input.ReadInt32(ref result.rank_);
+              break;
+            }
+            case 21: {
+              result.hasRankScore = input.ReadFloat(ref result.rankScore_);
+              break;
+            }
+            case 26: {
+              result.hasName = input.ReadString(ref result.name_);
+              break;
+            }
+            case 32: {
+              result.hasNbGames = input.ReadInt32(ref result.nbGames_);
+              break;
+            }
+          }
+        }
+        
+        if (unknownFields != null) {
+          this.UnknownFields = unknownFields.Build();
+        }
+        return this;
+      }
+      
+      
+      public bool HasRank_ {
+        get { return result.hasRank_; }
+      }
+      public int Rank_ {
+        get { return result.Rank_; }
+        set { SetRank_(value); }
+      }
+      public Builder SetRank_(int value) {
+        PrepareBuilder();
+        result.hasRank_ = true;
+        result.rank_ = value;
+        return this;
+      }
+      public Builder ClearRank_() {
+        PrepareBuilder();
+        result.hasRank_ = false;
+        result.rank_ = 0;
+        return this;
+      }
+      
+      public bool HasRankScore {
+        get { return result.hasRankScore; }
+      }
+      public float RankScore {
+        get { return result.RankScore; }
+        set { SetRankScore(value); }
+      }
+      public Builder SetRankScore(float value) {
+        PrepareBuilder();
+        result.hasRankScore = true;
+        result.rankScore_ = value;
+        return this;
+      }
+      public Builder ClearRankScore() {
+        PrepareBuilder();
+        result.hasRankScore = false;
+        result.rankScore_ = 0F;
+        return this;
+      }
+      
+      public bool HasName {
+        get { return result.hasName; }
+      }
+      public string Name {
+        get { return result.Name; }
+        set { SetName(value); }
+      }
+      public Builder SetName(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasName = true;
+        result.name_ = value;
+        return this;
+      }
+      public Builder ClearName() {
+        PrepareBuilder();
+        result.hasName = false;
+        result.name_ = "";
+        return this;
+      }
+      
+      public bool HasNbGames {
+        get { return result.hasNbGames; }
+      }
+      public int NbGames {
+        get { return result.NbGames; }
+        set { SetNbGames(value); }
+      }
+      public Builder SetNbGames(int value) {
+        PrepareBuilder();
+        result.hasNbGames = true;
+        result.nbGames_ = value;
+        return this;
+      }
+      public Builder ClearNbGames() {
+        PrepareBuilder();
+        result.hasNbGames = false;
+        result.nbGames_ = 0;
+        return this;
+      }
+    }
+    static Rank() {
+      object.ReferenceEquals(global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.Descriptor, null);
+    }
+  }
+  
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class AccessRights : pb::GeneratedMessage<AccessRights, AccessRights.Builder> {
+    private AccessRights() { }
+    private static readonly AccessRights defaultInstance = new AccessRights().MakeReadOnly();
+    private static readonly string[] _accessRightsFieldNames = new string[] { "feature", "name" };
+    private static readonly uint[] _accessRightsFieldTags = new uint[] { 18, 10 };
+    public static AccessRights DefaultInstance {
+      get { return defaultInstance; }
+    }
+    
+    public override AccessRights DefaultInstanceForType {
+      get { return DefaultInstance; }
+    }
+    
+    protected override AccessRights ThisMessage {
+      get { return this; }
+    }
+    
+    public static pbd::MessageDescriptor Descriptor {
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.internal__static_virtuos_AccessRights__Descriptor; }
+    }
+    
+    protected override pb::FieldAccess.FieldAccessorTable<AccessRights, AccessRights.Builder> InternalFieldAccessors {
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.internal__static_virtuos_AccessRights__FieldAccessorTable; }
+    }
+    
+    public const int NameFieldNumber = 1;
+    private bool hasName;
+    private string name_ = "";
+    public bool HasName {
+      get { return hasName; }
+    }
+    public string Name {
+      get { return name_; }
+    }
+    
+    public const int FeatureFieldNumber = 2;
+    private bool hasFeature;
+    private string feature_ = "";
+    public bool HasFeature {
+      get { return hasFeature; }
+    }
+    public string Feature {
+      get { return feature_; }
+    }
+    
+    public override bool IsInitialized {
+      get {
+        return true;
+      }
+    }
+    
+    public override void WriteTo(pb::ICodedOutputStream output) {
+      CalcSerializedSize();
+      string[] field_names = _accessRightsFieldNames;
+      if (hasName) {
+        output.WriteString(1, field_names[1], Name);
+      }
+      if (hasFeature) {
+        output.WriteString(2, field_names[0], Feature);
+      }
+      UnknownFields.WriteTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public override int SerializedSize {
+      get {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+        return CalcSerializedSize();
+      }
+    }
+    
+    private int CalcSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+      
+      size = 0;
+      if (hasName) {
+        size += pb::CodedOutputStream.ComputeStringSize(1, Name);
+      }
+      if (hasFeature) {
+        size += pb::CodedOutputStream.ComputeStringSize(2, Feature);
+      }
+      size += UnknownFields.SerializedSize;
+      memoizedSerializedSize = size;
+      return size;
+    }
+    public static AccessRights ParseFrom(pb::ByteString data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static AccessRights ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static AccessRights ParseFrom(byte[] data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static AccessRights ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static AccessRights ParseFrom(global::System.IO.Stream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static AccessRights ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    public static AccessRights ParseDelimitedFrom(global::System.IO.Stream input) {
+      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
+    }
+    public static AccessRights ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
+    }
+    public static AccessRights ParseFrom(pb::ICodedInputStream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static AccessRights ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    private AccessRights MakeReadOnly() {
+      return this;
+    }
+    
+    public static Builder CreateBuilder() { return new Builder(); }
+    public override Builder ToBuilder() { return CreateBuilder(this); }
+    public override Builder CreateBuilderForType() { return new Builder(); }
+    public static Builder CreateBuilder(AccessRights prototype) {
+      return new Builder(prototype);
+    }
+    
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public sealed partial class Builder : pb::GeneratedBuilder<AccessRights, Builder> {
+      protected override Builder ThisBuilder {
+        get { return this; }
+      }
+      public Builder() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+      }
+      internal Builder(AccessRights cloneFrom) {
+        result = cloneFrom;
+        resultIsReadOnly = true;
+      }
+      
+      private bool resultIsReadOnly;
+      private AccessRights result;
+      
+      private AccessRights PrepareBuilder() {
+        if (resultIsReadOnly) {
+          AccessRights original = result;
+          result = new AccessRights();
+          resultIsReadOnly = false;
+          MergeFrom(original);
+        }
+        return result;
+      }
+      
+      public override bool IsInitialized {
+        get { return result.IsInitialized; }
+      }
+      
+      protected override AccessRights MessageBeingBuilt {
+        get { return PrepareBuilder(); }
+      }
+      
+      public override Builder Clear() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+        return this;
+      }
+      
+      public override Builder Clone() {
+        if (resultIsReadOnly) {
+          return new Builder(result);
+        } else {
+          return new Builder().MergeFrom(result);
+        }
+      }
+      
+      public override pbd::MessageDescriptor DescriptorForType {
+        get { return global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.Descriptor; }
+      }
+      
+      public override AccessRights DefaultInstanceForType {
+        get { return global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.DefaultInstance; }
+      }
+      
+      public override AccessRights BuildPartial() {
+        if (resultIsReadOnly) {
+          return result;
+        }
+        resultIsReadOnly = true;
+        return result.MakeReadOnly();
+      }
+      
+      public override Builder MergeFrom(pb::IMessage other) {
+        if (other is AccessRights) {
+          return MergeFrom((AccessRights) other);
+        } else {
+          base.MergeFrom(other);
+          return this;
+        }
+      }
+      
+      public override Builder MergeFrom(AccessRights other) {
+        if (other == global::Com.Virtuos.Rocket.NetworkMessage.AccessRights.DefaultInstance) return this;
+        PrepareBuilder();
+        if (other.HasName) {
+          Name = other.Name;
+        }
+        if (other.HasFeature) {
+          Feature = other.Feature;
+        }
+        this.MergeUnknownFields(other.UnknownFields);
+        return this;
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input) {
+        return MergeFrom(input, pb::ExtensionRegistry.Empty);
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+        PrepareBuilder();
+        pb::UnknownFieldSet.Builder unknownFields = null;
+        uint tag;
+        string field_name;
+        while (input.ReadTag(out tag, out field_name)) {
+          if(tag == 0 && field_name != null) {
+            int field_ordinal = global::System.Array.BinarySearch(_accessRightsFieldNames, field_name, global::System.StringComparer.Ordinal);
+            if(field_ordinal >= 0)
+              tag = _accessRightsFieldTags[field_ordinal];
+            else {
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              continue;
+            }
+          }
+          switch (tag) {
+            case 0: {
+              throw pb::InvalidProtocolBufferException.InvalidTag();
+            }
+            default: {
+              if (pb::WireFormat.IsEndGroupTag(tag)) {
+                if (unknownFields != null) {
+                  this.UnknownFields = unknownFields.Build();
+                }
+                return this;
+              }
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              break;
+            }
+            case 10: {
+              result.hasName = input.ReadString(ref result.name_);
+              break;
+            }
+            case 18: {
+              result.hasFeature = input.ReadString(ref result.feature_);
+              break;
+            }
+          }
+        }
+        
+        if (unknownFields != null) {
+          this.UnknownFields = unknownFields.Build();
+        }
+        return this;
+      }
+      
+      
+      public bool HasName {
+        get { return result.hasName; }
+      }
+      public string Name {
+        get { return result.Name; }
+        set { SetName(value); }
+      }
+      public Builder SetName(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasName = true;
+        result.name_ = value;
+        return this;
+      }
+      public Builder ClearName() {
+        PrepareBuilder();
+        result.hasName = false;
+        result.name_ = "";
+        return this;
+      }
+      
+      public bool HasFeature {
+        get { return result.hasFeature; }
+      }
+      public string Feature {
+        get { return result.Feature; }
+        set { SetFeature(value); }
+      }
+      public Builder SetFeature(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasFeature = true;
+        result.feature_ = value;
+        return this;
+      }
+      public Builder ClearFeature() {
+        PrepareBuilder();
+        result.hasFeature = false;
+        result.feature_ = "";
+        return this;
+      }
+    }
+    static AccessRights() {
       object.ReferenceEquals(global::Com.Virtuos.Rocket.NetworkMessage.GameProtos.Descriptor, null);
     }
   }

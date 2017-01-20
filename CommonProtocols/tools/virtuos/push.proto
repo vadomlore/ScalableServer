@@ -1,0 +1,19 @@
+package virtuos;
+
+import "google/protobuf/csharp_options.proto";
+
+option (google.protobuf.csharp_file_options).namespace = "Com.Virtuos.Rocket.NetworkMessage";
+option (google.protobuf.csharp_file_options).umbrella_classname = "PushProtos";
+
+option optimize_for = SPEED;
+
+message Device
+{
+	required bytes token = 1;
+}
+
+message DeviceType 
+{
+	required bytes token = 1;
+	required string type = 2;
+}

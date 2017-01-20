@@ -1,0 +1,85 @@
+package virtuos;
+import "google/protobuf/csharp_options.proto";
+import "virtuos/common.proto";
+import "virtuos/push.proto";
+import "virtuos/game.proto";
+
+option (google.protobuf.csharp_file_options).namespace = "Com.Virtuos.Rocket.NetworkMessage";
+option (google.protobuf.csharp_file_options).umbrella_classname = "AsyncProtos";
+
+option optimize_for = SPEED;
+
+message ActionCommitedRequest 
+{
+	extend Message
+	{
+        optional ActionCommitedRequest request_number = 523;
+    }
+
+	optional int64 game_id= 2;
+	optional int32 turn_index = 3;
+}
+
+//C->S
+message AsyncAuthRequest
+{
+	extend Message 
+	{
+		optional  AsyncAuthRequest request_number = 400; 
+	}
+
+	optional string name = 2; //Player login name
+	optional string pass = 3; //Player binhex md5 encoded password
+	optional PartnerToken partner_token = 4; // Unused
+	optional AsyncAuthRequest.UserAgent user_agent = 5; //Client user agent
+	optional Session session = 6; //if sent, then that means we want to resume a given sessionnote that you still must send the user credentials to prevent session stealing
+	optional string game_type = 7; //This is required - multi game protocol requires a distinct authenticationper player per game.Game types are enforced on the server and the time of writing only SW and TT are valid
+	optional DeviceType device = 8;
+	message UserAgent 
+	{
+		optional string user_agent = 1; //this contains the codified User Agent (Downloadable, Steam, iPad, MacOSX, Pocket...)
+		optional string full_user_agent = 2; //this would contain the full string obeying the following format: platform:ua:version;
+	}
+}
+
+//S->C
+message AsyncConnectedRequest
+{
+	extend Message
+	{
+		optional AsyncConnectedRequest request_number = 406;
+	}
+
+	optional Session session = 2; //the current player session
+	optional Player optional = 3; //the current player information
+}
+
+//S->C
+message AsyncConnectionErrorRequest
+{
+	enum ConnectionError
+	{
+		UNKNOWN = 0;
+		ACCESS_DENIED = 1; //wrong password or login
+		SERVERFULL_ERROR = 2; //service is over-capacity, not accepting new connections
+		MAINTENANCE_MODE = 3; //maintenance mode, not accepting new connections
+		NEED_AUTHENTICATION = 4;//no credentials provided
+		UNKNOWN_GAME_TYPE = 5;//this service doesn¡¯t run this game
+		SERVER_ERROR = 6;//unknown error from the server
+		BANNED = 7;//this player has been either temporarily or definitely banned
+	}
+
+	extend Message
+	{
+		optional AsyncConnectionErrorRequest request_number = 407;
+	}
+
+	optional AsyncConnectionErrorRequest.ConnectionError code = 2;
+}
+
+
+message Session 
+{
+
+	optional int64 id = 1;
+}

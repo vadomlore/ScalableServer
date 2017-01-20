@@ -1,5 +1,6 @@
 ﻿namespace ScalableServer
 {
+    using Authenticate;
     using Com.Virtuos.Rocket.NetworkMessage;
     using DotNetty.Transport.Channels;
     using System;
@@ -21,6 +22,10 @@
                 Console.WriteLine($"Receive {packet.Payload.GetType().Name}: GameId:{request.GameId} TurnIndex: {request.TurnIndex}");                
                 packet = AddGameTurn(request);
                 ctx.WriteAndFlushAsync(packet);
+            }
+            else if(msg.RequestNumber == AsyncAuthRequest.RequestNumberFieldNumber)
+            {
+                new AuthenticateRequestHandler(ctx, msg.GetExtension<AsyncAuthRequest>(AsyncAuthRequest.RequestNumber)).ProcessAuthenciate();
             }
         }
 

@@ -9,7 +9,7 @@ using scg = global::System.Collections.Generic;
 namespace Com.Virtuos.Rocket.NetworkMessage {
   
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-  public static partial class BaseProtos {
+  public static partial class CommonProtos {
   
     #region Extension registration
     public static void RegisterAllExtensions(pb::ExtensionRegistry registry) {
@@ -20,6 +20,8 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
     internal static pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.Message, global::Com.Virtuos.Rocket.NetworkMessage.Message.Builder> internal__static_virtuos_Message__FieldAccessorTable;
     internal static pbd::MessageDescriptor internal__static_virtuos_Packet__Descriptor;
     internal static pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.Packet, global::Com.Virtuos.Rocket.NetworkMessage.Packet.Builder> internal__static_virtuos_Packet__FieldAccessorTable;
+    internal static pbd::MessageDescriptor internal__static_virtuos_PartnerToken__Descriptor;
+    internal static pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.PartnerToken, global::Com.Virtuos.Rocket.NetworkMessage.PartnerToken.Builder> internal__static_virtuos_PartnerToken__FieldAccessorTable;
     #endregion
     #region Descriptor
     public static pbd::FileDescriptor Descriptor {
@@ -27,15 +29,17 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
     }
     private static pbd::FileDescriptor descriptor;
     
-    static BaseProtos() {
+    static CommonProtos() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChR2aXJ0dW9zL2NvbW1vbi5wcm90bxIHdmlydHVvcxokZ29vZ2xlL3Byb3Rv", 
             "YnVmL2NzaGFycF9vcHRpb25zLnByb3RvIjcKB01lc3NhZ2USFgoOcmVxdWVz", 
             "dF9udW1iZXIYASABKAUSCgoCaWQYAiABKAUqCAhkEICAgIACIjcKBlBhY2tl", 
             "dBIKCgJpZBgBIAEoAxIhCgdwYXlsb2FkGAMgASgLMhAudmlydHVvcy5NZXNz", 
-            "YWdlQjRIAcI+LwohQ29tLlZpcnR1b3MuUm9ja2V0Lk5ldHdvcmtNZXNzYWdl", 
-          "EgpCYXNlUHJvdG9z"));
+            "YWdlIk4KDFBhcnRuZXJUb2tlbhIRCglwYXJ0bmVySWQYASABKAkSFQoNcGFy", 
+            "dG5lclVzZXJJZBgCIAEoCRIUCgxzZXNzaW9uVG9rZW4YAyABKAlCNkgBwj4x", 
+            "CiFDb20uVmlydHVvcy5Sb2NrZXQuTmV0d29ya01lc3NhZ2USDENvbW1vblBy", 
+          "b3Rvcw=="));
       pbd::FileDescriptor.InternalDescriptorAssigner assigner = delegate(pbd::FileDescriptor root) {
         descriptor = root;
         internal__static_virtuos_Message__Descriptor = Descriptor.MessageTypes[0];
@@ -46,6 +50,10 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
         internal__static_virtuos_Packet__FieldAccessorTable = 
             new pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.Packet, global::Com.Virtuos.Rocket.NetworkMessage.Packet.Builder>(internal__static_virtuos_Packet__Descriptor,
                 new string[] { "Id", "Payload", });
+        internal__static_virtuos_PartnerToken__Descriptor = Descriptor.MessageTypes[2];
+        internal__static_virtuos_PartnerToken__FieldAccessorTable = 
+            new pb::FieldAccess.FieldAccessorTable<global::Com.Virtuos.Rocket.NetworkMessage.PartnerToken, global::Com.Virtuos.Rocket.NetworkMessage.PartnerToken.Builder>(internal__static_virtuos_PartnerToken__Descriptor,
+                new string[] { "PartnerId", "PartnerUserId", "SessionToken", });
         pb::ExtensionRegistry registry = pb::ExtensionRegistry.CreateInstance();
         RegisterAllExtensions(registry);
         global::Google.ProtocolBuffers.DescriptorProtos.CSharpOptions.RegisterAllExtensions(registry);
@@ -79,11 +87,11 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::Com.Virtuos.Rocket.NetworkMessage.BaseProtos.internal__static_virtuos_Message__Descriptor; }
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.internal__static_virtuos_Message__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<Message, Message.Builder> InternalFieldAccessors {
-      get { return global::Com.Virtuos.Rocket.NetworkMessage.BaseProtos.internal__static_virtuos_Message__FieldAccessorTable; }
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.internal__static_virtuos_Message__FieldAccessorTable; }
     }
     
     public const int RequestNumberFieldNumber = 1;
@@ -379,7 +387,7 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
       }
     }
     static Message() {
-      object.ReferenceEquals(global::Com.Virtuos.Rocket.NetworkMessage.BaseProtos.Descriptor, null);
+      object.ReferenceEquals(global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.Descriptor, null);
     }
   }
   
@@ -402,11 +410,11 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
     }
     
     public static pbd::MessageDescriptor Descriptor {
-      get { return global::Com.Virtuos.Rocket.NetworkMessage.BaseProtos.internal__static_virtuos_Packet__Descriptor; }
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.internal__static_virtuos_Packet__Descriptor; }
     }
     
     protected override pb::FieldAccess.FieldAccessorTable<Packet, Packet.Builder> InternalFieldAccessors {
-      get { return global::Com.Virtuos.Rocket.NetworkMessage.BaseProtos.internal__static_virtuos_Packet__FieldAccessorTable; }
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.internal__static_virtuos_Packet__FieldAccessorTable; }
     }
     
     public const int IdFieldNumber = 1;
@@ -722,7 +730,371 @@ namespace Com.Virtuos.Rocket.NetworkMessage {
       }
     }
     static Packet() {
-      object.ReferenceEquals(global::Com.Virtuos.Rocket.NetworkMessage.BaseProtos.Descriptor, null);
+      object.ReferenceEquals(global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.Descriptor, null);
+    }
+  }
+  
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public sealed partial class PartnerToken : pb::GeneratedMessage<PartnerToken, PartnerToken.Builder> {
+    private PartnerToken() { }
+    private static readonly PartnerToken defaultInstance = new PartnerToken().MakeReadOnly();
+    private static readonly string[] _partnerTokenFieldNames = new string[] { "partnerId", "partnerUserId", "sessionToken" };
+    private static readonly uint[] _partnerTokenFieldTags = new uint[] { 10, 18, 26 };
+    public static PartnerToken DefaultInstance {
+      get { return defaultInstance; }
+    }
+    
+    public override PartnerToken DefaultInstanceForType {
+      get { return DefaultInstance; }
+    }
+    
+    protected override PartnerToken ThisMessage {
+      get { return this; }
+    }
+    
+    public static pbd::MessageDescriptor Descriptor {
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.internal__static_virtuos_PartnerToken__Descriptor; }
+    }
+    
+    protected override pb::FieldAccess.FieldAccessorTable<PartnerToken, PartnerToken.Builder> InternalFieldAccessors {
+      get { return global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.internal__static_virtuos_PartnerToken__FieldAccessorTable; }
+    }
+    
+    public const int PartnerIdFieldNumber = 1;
+    private bool hasPartnerId;
+    private string partnerId_ = "";
+    public bool HasPartnerId {
+      get { return hasPartnerId; }
+    }
+    public string PartnerId {
+      get { return partnerId_; }
+    }
+    
+    public const int PartnerUserIdFieldNumber = 2;
+    private bool hasPartnerUserId;
+    private string partnerUserId_ = "";
+    public bool HasPartnerUserId {
+      get { return hasPartnerUserId; }
+    }
+    public string PartnerUserId {
+      get { return partnerUserId_; }
+    }
+    
+    public const int SessionTokenFieldNumber = 3;
+    private bool hasSessionToken;
+    private string sessionToken_ = "";
+    public bool HasSessionToken {
+      get { return hasSessionToken; }
+    }
+    public string SessionToken {
+      get { return sessionToken_; }
+    }
+    
+    public override bool IsInitialized {
+      get {
+        return true;
+      }
+    }
+    
+    public override void WriteTo(pb::ICodedOutputStream output) {
+      CalcSerializedSize();
+      string[] field_names = _partnerTokenFieldNames;
+      if (hasPartnerId) {
+        output.WriteString(1, field_names[0], PartnerId);
+      }
+      if (hasPartnerUserId) {
+        output.WriteString(2, field_names[1], PartnerUserId);
+      }
+      if (hasSessionToken) {
+        output.WriteString(3, field_names[2], SessionToken);
+      }
+      UnknownFields.WriteTo(output);
+    }
+    
+    private int memoizedSerializedSize = -1;
+    public override int SerializedSize {
+      get {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+        return CalcSerializedSize();
+      }
+    }
+    
+    private int CalcSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+      
+      size = 0;
+      if (hasPartnerId) {
+        size += pb::CodedOutputStream.ComputeStringSize(1, PartnerId);
+      }
+      if (hasPartnerUserId) {
+        size += pb::CodedOutputStream.ComputeStringSize(2, PartnerUserId);
+      }
+      if (hasSessionToken) {
+        size += pb::CodedOutputStream.ComputeStringSize(3, SessionToken);
+      }
+      size += UnknownFields.SerializedSize;
+      memoizedSerializedSize = size;
+      return size;
+    }
+    public static PartnerToken ParseFrom(pb::ByteString data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static PartnerToken ParseFrom(pb::ByteString data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static PartnerToken ParseFrom(byte[] data) {
+      return ((Builder) CreateBuilder().MergeFrom(data)).BuildParsed();
+    }
+    public static PartnerToken ParseFrom(byte[] data, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(data, extensionRegistry)).BuildParsed();
+    }
+    public static PartnerToken ParseFrom(global::System.IO.Stream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static PartnerToken ParseFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    public static PartnerToken ParseDelimitedFrom(global::System.IO.Stream input) {
+      return CreateBuilder().MergeDelimitedFrom(input).BuildParsed();
+    }
+    public static PartnerToken ParseDelimitedFrom(global::System.IO.Stream input, pb::ExtensionRegistry extensionRegistry) {
+      return CreateBuilder().MergeDelimitedFrom(input, extensionRegistry).BuildParsed();
+    }
+    public static PartnerToken ParseFrom(pb::ICodedInputStream input) {
+      return ((Builder) CreateBuilder().MergeFrom(input)).BuildParsed();
+    }
+    public static PartnerToken ParseFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+      return ((Builder) CreateBuilder().MergeFrom(input, extensionRegistry)).BuildParsed();
+    }
+    private PartnerToken MakeReadOnly() {
+      return this;
+    }
+    
+    public static Builder CreateBuilder() { return new Builder(); }
+    public override Builder ToBuilder() { return CreateBuilder(this); }
+    public override Builder CreateBuilderForType() { return new Builder(); }
+    public static Builder CreateBuilder(PartnerToken prototype) {
+      return new Builder(prototype);
+    }
+    
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public sealed partial class Builder : pb::GeneratedBuilder<PartnerToken, Builder> {
+      protected override Builder ThisBuilder {
+        get { return this; }
+      }
+      public Builder() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+      }
+      internal Builder(PartnerToken cloneFrom) {
+        result = cloneFrom;
+        resultIsReadOnly = true;
+      }
+      
+      private bool resultIsReadOnly;
+      private PartnerToken result;
+      
+      private PartnerToken PrepareBuilder() {
+        if (resultIsReadOnly) {
+          PartnerToken original = result;
+          result = new PartnerToken();
+          resultIsReadOnly = false;
+          MergeFrom(original);
+        }
+        return result;
+      }
+      
+      public override bool IsInitialized {
+        get { return result.IsInitialized; }
+      }
+      
+      protected override PartnerToken MessageBeingBuilt {
+        get { return PrepareBuilder(); }
+      }
+      
+      public override Builder Clear() {
+        result = DefaultInstance;
+        resultIsReadOnly = true;
+        return this;
+      }
+      
+      public override Builder Clone() {
+        if (resultIsReadOnly) {
+          return new Builder(result);
+        } else {
+          return new Builder().MergeFrom(result);
+        }
+      }
+      
+      public override pbd::MessageDescriptor DescriptorForType {
+        get { return global::Com.Virtuos.Rocket.NetworkMessage.PartnerToken.Descriptor; }
+      }
+      
+      public override PartnerToken DefaultInstanceForType {
+        get { return global::Com.Virtuos.Rocket.NetworkMessage.PartnerToken.DefaultInstance; }
+      }
+      
+      public override PartnerToken BuildPartial() {
+        if (resultIsReadOnly) {
+          return result;
+        }
+        resultIsReadOnly = true;
+        return result.MakeReadOnly();
+      }
+      
+      public override Builder MergeFrom(pb::IMessage other) {
+        if (other is PartnerToken) {
+          return MergeFrom((PartnerToken) other);
+        } else {
+          base.MergeFrom(other);
+          return this;
+        }
+      }
+      
+      public override Builder MergeFrom(PartnerToken other) {
+        if (other == global::Com.Virtuos.Rocket.NetworkMessage.PartnerToken.DefaultInstance) return this;
+        PrepareBuilder();
+        if (other.HasPartnerId) {
+          PartnerId = other.PartnerId;
+        }
+        if (other.HasPartnerUserId) {
+          PartnerUserId = other.PartnerUserId;
+        }
+        if (other.HasSessionToken) {
+          SessionToken = other.SessionToken;
+        }
+        this.MergeUnknownFields(other.UnknownFields);
+        return this;
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input) {
+        return MergeFrom(input, pb::ExtensionRegistry.Empty);
+      }
+      
+      public override Builder MergeFrom(pb::ICodedInputStream input, pb::ExtensionRegistry extensionRegistry) {
+        PrepareBuilder();
+        pb::UnknownFieldSet.Builder unknownFields = null;
+        uint tag;
+        string field_name;
+        while (input.ReadTag(out tag, out field_name)) {
+          if(tag == 0 && field_name != null) {
+            int field_ordinal = global::System.Array.BinarySearch(_partnerTokenFieldNames, field_name, global::System.StringComparer.Ordinal);
+            if(field_ordinal >= 0)
+              tag = _partnerTokenFieldTags[field_ordinal];
+            else {
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              continue;
+            }
+          }
+          switch (tag) {
+            case 0: {
+              throw pb::InvalidProtocolBufferException.InvalidTag();
+            }
+            default: {
+              if (pb::WireFormat.IsEndGroupTag(tag)) {
+                if (unknownFields != null) {
+                  this.UnknownFields = unknownFields.Build();
+                }
+                return this;
+              }
+              if (unknownFields == null) {
+                unknownFields = pb::UnknownFieldSet.CreateBuilder(this.UnknownFields);
+              }
+              ParseUnknownField(input, unknownFields, extensionRegistry, tag, field_name);
+              break;
+            }
+            case 10: {
+              result.hasPartnerId = input.ReadString(ref result.partnerId_);
+              break;
+            }
+            case 18: {
+              result.hasPartnerUserId = input.ReadString(ref result.partnerUserId_);
+              break;
+            }
+            case 26: {
+              result.hasSessionToken = input.ReadString(ref result.sessionToken_);
+              break;
+            }
+          }
+        }
+        
+        if (unknownFields != null) {
+          this.UnknownFields = unknownFields.Build();
+        }
+        return this;
+      }
+      
+      
+      public bool HasPartnerId {
+        get { return result.hasPartnerId; }
+      }
+      public string PartnerId {
+        get { return result.PartnerId; }
+        set { SetPartnerId(value); }
+      }
+      public Builder SetPartnerId(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasPartnerId = true;
+        result.partnerId_ = value;
+        return this;
+      }
+      public Builder ClearPartnerId() {
+        PrepareBuilder();
+        result.hasPartnerId = false;
+        result.partnerId_ = "";
+        return this;
+      }
+      
+      public bool HasPartnerUserId {
+        get { return result.hasPartnerUserId; }
+      }
+      public string PartnerUserId {
+        get { return result.PartnerUserId; }
+        set { SetPartnerUserId(value); }
+      }
+      public Builder SetPartnerUserId(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasPartnerUserId = true;
+        result.partnerUserId_ = value;
+        return this;
+      }
+      public Builder ClearPartnerUserId() {
+        PrepareBuilder();
+        result.hasPartnerUserId = false;
+        result.partnerUserId_ = "";
+        return this;
+      }
+      
+      public bool HasSessionToken {
+        get { return result.hasSessionToken; }
+      }
+      public string SessionToken {
+        get { return result.SessionToken; }
+        set { SetSessionToken(value); }
+      }
+      public Builder SetSessionToken(string value) {
+        pb::ThrowHelper.ThrowIfNull(value, "value");
+        PrepareBuilder();
+        result.hasSessionToken = true;
+        result.sessionToken_ = value;
+        return this;
+      }
+      public Builder ClearSessionToken() {
+        PrepareBuilder();
+        result.hasSessionToken = false;
+        result.sessionToken_ = "";
+        return this;
+      }
+    }
+    static PartnerToken() {
+      object.ReferenceEquals(global::Com.Virtuos.Rocket.NetworkMessage.CommonProtos.Descriptor, null);
     }
   }
   

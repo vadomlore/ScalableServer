@@ -3,7 +3,7 @@ package virtuos;
 import "google/protobuf/csharp_options.proto";
 
 option (google.protobuf.csharp_file_options).namespace = "Com.Virtuos.Rocket.NetworkMessage";
-option (google.protobuf.csharp_file_options).umbrella_classname = "BaseProtos";
+option (google.protobuf.csharp_file_options).umbrella_classname = "CommonProtos";
 
 option optimize_for = SPEED;
 
@@ -18,3 +18,10 @@ message Packet {
     optional int64 id = 1;
     optional Message payload = 3;
 }
+
+message PartnerToken {
+  optional string partnerId = 1;
+  optional string partnerUserId = 2;
+  optional string sessionToken = 3;
+}
+

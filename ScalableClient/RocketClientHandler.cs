@@ -5,6 +5,8 @@ namespace ScalableClient
     using DotNetty.Transport.Channels;
     using Com.Virtuos.Rocket.NetworkMessage;
     using Google.ProtocolBuffers;
+    using CommonProtocols;
+
     public class RocketClientHandler : SimpleChannelInboundHandler<Packet>
     {
 
@@ -31,12 +33,19 @@ namespace ScalableClient
             {
                 var response = msg.GetExtension<PingRequest>(PingRequest.RequestNumber);
                 Console.WriteLine($"Receive server response pong:" + response.Timestamp);
-                SendActionCommitRequest();
+                SendUserPasswordAuthenticateRequest();
             }
             else if(msg.RequestNumber == ActionCommitedRequest.RequestNumberFieldNumber)
             {
                 var response = msg.GetExtension<ActionCommitedRequest>(ActionCommitedRequest.RequestNumber);
                 Console.WriteLine($"Receive server response Submit GameTurn: [GameId: {response.GameId} TurnIndex: {response.TurnIndex}]");
+
+            }
+            else if (msg.RequestNumber == AsyncConnectionErrorRequest.RequestNumberFieldNumber)
+            {
+                var response = msg.GetExtension<AsyncConnectionErrorRequest>(AsyncConnectionErrorRequest.RequestNumber);
+                Console.WriteLine($"Receive server response [ErrorCode: {response.Code}");
+                SendActionCommitRequest();
             }
         }
 
@@ -44,14 +53,8 @@ namespace ScalableClient
         void SendPing()
         {            
             var pingRequest = PingRequest.CreateBuilder().SetTimestamp(UnixNow).Build();
-            var messageBuilder= Message.CreateBuilder();
-            messageBuilder.SetRequestNumber(PingRequest.RequestNumberFieldNumber);
-            messageBuilder.SetExtension<PingRequest>(PingRequest.RequestNumber, pingRequest);
-            var msg = messageBuilder.Build();
-            var packet = Packet.CreateBuilder();
-            packet.Id = new Random().Next(0, int.MaxValue);
-            packet.Payload = msg;
-            this.ctx.WriteAndFlushAsync(packet.Build());
+            var packet = ProtocolWrapper.WrapMessage<PingRequest>(PingRequest.RequestNumberFieldNumber, PingRequest.RequestNumber, pingRequest);
+            this.ctx.WriteAndFlushAsync(packet);
         }
 
         void SendActionCommitRequest()
@@ -61,15 +64,22 @@ namespace ScalableClient
                 SetGameId(1).
                 SetTurnIndex(1).
                 Build();
-            var messageBuilder = Message.CreateBuilder();
-            messageBuilder.SetRequestNumber(ActionCommitedRequest.RequestNumberFieldNumber);
-            messageBuilder.SetExtension<ActionCommitedRequest>(ActionCommitedRequest.RequestNumber, actionCommitRequest);
-            var msg = messageBuilder.Build();
-            var packet = Packet.CreateBuilder();
-            packet.Id = new Random().Next(0, int.MaxValue);
-            packet.Payload = msg;
-            this.ctx.WriteAndFlushAsync(packet.Build());
+            var packet = ProtocolWrapper.WrapMessage<ActionCommitedRequest>(ActionCommitedRequest.RequestNumberFieldNumber, ActionCommitedRequest.RequestNumber, actionCommitRequest);
+            this.ctx.WriteAndFlushAsync(packet);
             Console.WriteLine($"Submit GameTurn: [GameId: {actionCommitRequest.GameId} TurnIndex: {actionCommitRequest.TurnIndex}]");
         }
+
+
+        void SendUserPasswordAuthenticateRequest()
+        {
+            var authenticateRequest = AsyncAuthRequest.
+                CreateBuilder().
+                SetName("alice").
+                SetPass("a123456").
+                Build();
+            var packet = ProtocolWrapper.WrapMessage<AsyncAuthRequest>(AsyncAuthRequest.RequestNumberFieldNumber, AsyncAuthRequest.RequestNumber, authenticateRequest);
+            this.ctx.WriteAndFlushAsync(packet);
+        }
+
     }
 }

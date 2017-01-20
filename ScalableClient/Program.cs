@@ -78,7 +78,6 @@
                         break;
                     }
                 }
-
                 await bootstrapChannel.CloseAsync();
             }
             finally
@@ -90,9 +89,11 @@
         public static ExtensionRegistry RegistyExtensions()
         {
             var extension = ExtensionRegistry.CreateInstance();
-            BaseProtos.RegisterAllExtensions(extension);
+            CommonProtos.RegisterAllExtensions(extension);
             RequestProtos.RegisterAllExtensions(extension);
             GameProtos.RegisterAllExtensions(extension);
+            PushProtos.RegisterAllExtensions(extension);
+            AsyncProtos.RegisterAllExtensions(extension);
             return extension;
         }
 
